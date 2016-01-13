@@ -1,0 +1,74 @@
+{% spaceless %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset=utf-8 />
+  <meta name='description' content='Search onion web pages' />
+  <meta name='keywords' content='onion domains, hidden services, deep web, search engine, onion pages, onion sites, list, cache, tor, tor2web, index, search, pages, show content' />
+  <meta name='author' content='ahmia' />
+  <title>{% block title %}{% endblock %}</title>
+  <link rel='stylesheet' type='text/css' href='/static/styles/base_styles.css' />
+  <script src='/static/js/jquery.min.js'></script>
+  <script src='/static/js/highlight.js'></script>
+  <link rel="shortcut icon" href="/static/images/favicon.ico" />
+  <link href='/static/styles/fontstyles/Cagliostro.css' rel='stylesheet' />
+  <link href='/static/styles/fontstyles/Bitter.css' rel='stylesheet' />
+  <link href='/static/styles/fontstyles/OpenSans.css' rel='stylesheet' />
+</head>
+
+<body>
+  <a href="http://visitorfi5kl7q7i.onion/" id="cornerBanner">VisiTOR Hidden Website</a>
+
+  <header class="pagetitle" role="banner">
+
+    <a href="/" title="visitorfi5kl7q7i.onion home">
+      <h1>- Tor Hidden Service (.onion) search -</h1>
+      <p class="ahmia">visitorfi5kl7q7i.onion</p>
+    </a>
+  </header>
+  <div id="content">
+    {% block content %}{% endblock %}
+  </div>
+  <hr />
+  <footer>
+    <p>This is a search engine for hidden onion sites running inside <a href="https://www.torproject.org/" rel="external">Tor</a> network. Use <a href="https://www.torproject.org/projects/torbrowser.html.en">Tor Browser Bundle</a> to access hidden services.
+      <br />
+      <a href="/add/">Add</a> new sites. <a href="/documentation/indexing/">HS crawling info</a>. <a href="/address/">Inform us</a> about CP and we will <a href="/policy/">filter it</a>.
+      <a href="/stats/viewer">Hidden Websites statistics</a>: <strong class="color12">{{ count_online }} online</strong> &sol; <strong class="color1">{{ count_banned }} filtered</strong>.</p>
+  </footer>
+  <nav class="clearfix" role="navigation">
+    <div class="item">
+      <h3>Searches</h3>
+      <ul>
+        <li><a href="/search/">A full text search</a>
+        </li>
+        <li><a href="/address/">Onion Directory</a>
+        </li>
+        <li><a href="/about/">About us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="item">
+      <h3>Contact</h3>
+      <p><a href="/disclaimer/">Disclaimer</a>
+      </p>
+    </div>
+    <div class="item">
+      <div id="tweet_div">
+        <ul id="tweet_update_list">
+          <li>
+            <span>
+         </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <p class="btc"></p>
+</body>
+
+</html>
+
+{% endspaceless %}

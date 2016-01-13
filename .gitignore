@@ -1,0 +1,4 @@
+ahmia/settings.py
+*.pyc
+*.json
+*log
